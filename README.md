@@ -1,2 +1,2 @@
 # job4j
-![Альтернативный текст](/home/anonimous/Pictures/logomini.png)
+![](/home/anonimous/Pictures/logomini.png)
