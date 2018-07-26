@@ -11,11 +11,11 @@
        <maven.compiler.source>1.8</maven.compiler.source>
        <maven.compiler.target>1.8</maven.compiler.target>
        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-     </properties>
+    </properties>
 
     <modules>
        <module>chapter_001</module>
-     </modules>
+    </modules>
 
 
     <dependencies>
@@ -34,37 +34,37 @@
     </dependencies>
 
 
-<build>
-  <plugins>
-  <plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-checkstyle-plugin</artifactId>
-  <version>2.17</version>
-  <executions>
-      <execution>
-          <id>validate</id>
-          <phase>validate</phase>
-          <configuration>
-              <configLocation>checkstyle.xml</configLocation>
-              <encoding>UTF-8</encoding>
-              <consoleOutput>true</consoleOutput>
-              <failsOnError>true</failsOnError>
-              <includeTestSourceDirectory>true</includeTestSourceDirectory>
-          </configuration>
-          <goals>
-              <goal>check</goal>
-          </goals>
-      </execution>
-  </executions>
-</plugin>
-
-
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-javadoc-plugin</artifactId>
-            <version>3.0.0</version>
-        </plugin>
-    </plugins>
+    <build>
+         <plugins>
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-checkstyle-plugin</artifactId>
+                 <version>2.17</version>
+                 <executions>
+                     <execution>
+                         <id>validate</id>
+                         <phase>validate</phase>
+                         <configuration>
+                             <configLocation>checkstyle.xml</configLocation>
+                             <encoding>UTF-8</encoding>
+                             <consoleOutput>true</consoleOutput>
+                             <failsOnError>true</failsOnError>
+                             <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                         </configuration>
+                         <goals>
+                             <goal>check</goal>
+                         </goals>
+                     </execution>
+                 </executions>
+             </plugin>
+           
+           
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-javadoc-plugin</artifactId>
+                 <version>3.0.0</version>
+             </plugin>
+         </plugins>
     
-</build>
+    </build>
 </project>
