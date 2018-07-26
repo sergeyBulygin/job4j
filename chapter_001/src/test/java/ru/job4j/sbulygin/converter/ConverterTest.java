@@ -10,8 +10,15 @@ import static org.junit.Assert.assertThat;
  */
 public class ConverterTest {
 
+    /**
+     * Converter field.
+     */
     private Converter converter;
 
+
+    /**
+     * Method info for test.
+     */
     @Before
     public void infoForTest() {
 
