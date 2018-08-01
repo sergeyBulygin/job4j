@@ -7,7 +7,7 @@ import static org.junit.Assert.assertThat;
 /**
  * Fit class.
  * @author sbulygin.
- * @since 25.07.2018.
+ * @since 01.08.2018.
  * @version 1.0.
  */
 public class FitTest {
@@ -31,6 +31,8 @@ public class FitTest {
         double weight = fit.womanWeight(170);
         assertThat(weight, closeTo(69.0, 0.1));
     }
+
+
 }
 
 
