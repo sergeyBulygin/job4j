@@ -11,9 +11,9 @@ import static org.junit.Assert.assertThat;
 
 public class StoreTest {
 
-    List<Store.User> first;
-    List<Store.User> second;
-    Store store = new Store();
+    private List<Store.User> first;
+    private List<Store.User> second;
+    private Store store = new Store();
 
     @Before
     public void prepareForTests() {

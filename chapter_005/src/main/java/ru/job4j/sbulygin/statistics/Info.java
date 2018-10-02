@@ -2,6 +2,12 @@ package ru.job4j.sbulygin.statistics;
 
 import java.util.Objects;
 
+/**
+ * Info class.
+ * @author sbulygin.
+ * @since 18.08.2018.
+ * @version 1.0.
+ */
 public class Info {
 
     private int added;
