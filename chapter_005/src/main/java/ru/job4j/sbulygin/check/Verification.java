@@ -11,7 +11,6 @@ import java.util.Map;
  */
 public class Verification {
 
-
     public boolean checkWords(String wordOne, String wordTwo) {
 
         if (wordOne == null || wordTwo == null || wordOne.length() != wordTwo.length()) {
@@ -39,5 +38,6 @@ public class Verification {
         }
         return true;
     }
+
 
 }
