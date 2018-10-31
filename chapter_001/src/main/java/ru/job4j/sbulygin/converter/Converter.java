@@ -1,8 +1,11 @@
 package ru.job4j.sbulygin.converter;
 
-    /**
-     * Currency converter.
-     */
+/**
+ * Class Converter.
+ * @author sbulygin.
+ * @since 02.08.2018.
+ * @version 1.0.
+ */
     public class Converter {
 
         private static final int EVRORATE = 70;
