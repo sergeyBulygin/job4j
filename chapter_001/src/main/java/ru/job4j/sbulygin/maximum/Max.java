@@ -11,4 +11,10 @@ public class Max {
     public int findMaximum(int fist, int second) {
         return fist > second ? fist : second;
     }
+
+    public int findMaximum(int first, int second, int third) {
+        int temp = findMaximum(first, second);
+        temp = findMaximum(temp, third);
+        return temp;
+    }
 }

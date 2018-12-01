@@ -33,4 +33,10 @@ public class MaxTest {
         int result = maximum.findMaximum(10, 12);
         assertThat(result, is(12));
     }
+
+    @Test
+    public void whenSecondMoreFirstAndThirdThenSecondMaximum() {
+        int result = maximum.findMaximum(10, 12, 2);
+        assertThat(result, is(12));
+    }
 }
