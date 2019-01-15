@@ -1,5 +1,4 @@
 package ru.job4j.sbulygin.loop;
-
 /**
  * Class Counter.
  * @author sbulygin.
