@@ -5,7 +5,7 @@ import static org.hamcrest.number.IsCloseTo.closeTo;
 import static org.junit.Assert.assertThat;
 
 /**
- * Fit class.
+ * FitTest class.
  * @author sbulygin.
  * @since 01.08.2018.
  * @version 1.0.

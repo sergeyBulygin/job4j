@@ -3,7 +3,7 @@ package ru.job4j.sbulygin.loop;
 /**
  * Class Factorial.
  * @author sbulygin.
- * @since 14.01.2019.
+ * @since 15.01.2019.
  * @version 1.0.
  */
 public class Factorial {

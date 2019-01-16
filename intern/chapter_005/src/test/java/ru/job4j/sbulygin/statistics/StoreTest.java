@@ -9,6 +9,12 @@ import java.util.List;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+/**
+ * Store StoreTest.
+ * @author sbulygin.
+ * @since 18.08.2018.
+ * @version 1.0.
+ */
 public class StoreTest {
 
     private List<Store.User> first;

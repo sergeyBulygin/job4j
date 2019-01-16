@@ -6,7 +6,10 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
- * Class for test converter.
+ * Class ConverterTest.
+ * @author sbulygin.
+ * @since 02.08.2018.
+ * @version 1.0.
  */
 public class ConverterTest {
 

@@ -2,7 +2,7 @@
 * Package for converter task.
 *
 * @author sbulygin
-* @since 25.07.2018
+* @since 02.08.2018
 * @version 1.0
 */
 package ru.job4j.sbulygin.converter;

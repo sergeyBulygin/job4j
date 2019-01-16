@@ -5,9 +5,9 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
- * Class Factorial.
+ * Class FactorialTest.
  * @author sbulygin.
- * @since 14.01.2019.
+ * @since 15.01.2019.
  * @version 1.0.
  */
 public class FactorialTest {

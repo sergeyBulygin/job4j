@@ -6,7 +6,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.number.IsCloseTo.closeTo;
 
 /**
- * Class Triangle.
+ * Class TriangleTest.
  * @author sbulygin.
  * @since 01.12.2018.
  * @version 1.0.
