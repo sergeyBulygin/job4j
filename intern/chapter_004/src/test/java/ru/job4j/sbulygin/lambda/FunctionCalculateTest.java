@@ -1,6 +1,6 @@
 package ru.job4j.sbulygin.lambda;
 
-import org.junit.Before;
+
 import org.junit.Test;
 
 
@@ -49,6 +49,39 @@ public class FunctionCalculateTest {
     @Test
     public void whenFunctionIsLogarithmicThenReturnResultList() {
         List<Double> result = FunctionCalculate.diapason(start, end, Math :: log);
+
+        assertThat(result.get(0), is(closeTo(0.69, 0.004)));
+        assertThat(result.get(1), is(closeTo(1.09, 0.009)));
+        assertThat(result.get(2), is(closeTo(1.38, 0.009)));
+        assertThat(result.get(3), is(closeTo(1.60, 0.010)));
+    }
+
+    /**
+     * Test liner function.
+     */
+    @Test
+    public void whenFunctionIsLinerThenReturnResultListNoCycle() {
+        List<Double> result = FunctionCalculate.diapasonNoCycle(start, end, x -> 3 * x + 1);
+        List<Double> expect = Arrays.asList(7D, 10D, 13D, 16D);
+        assertThat(result, is(expect));
+    }
+
+    /**
+     * Test square function.
+     */
+    @Test
+    public void whenFunctionIsSquareThenReturnResultListNoCycle() {
+        List<Double> result = FunctionCalculate.diapasonNoCycle(start, end, x -> Math.pow(x, 2));
+        List<Double> expect = Arrays.asList(4D, 9D, 16D, 25D);
+        assertThat(result, is(expect));
+    }
+
+    /**
+     * Test logarithmic function.
+     */
+    @Test
+    public void whenFunctionIsLogarithmicThenReturnResultListNoCycle() {
+        List<Double> result = FunctionCalculate.diapasonNoCycle(start, end, Math :: log);
 
         assertThat(result.get(0), is(closeTo(0.69, 0.004)));
         assertThat(result.get(1), is(closeTo(1.09, 0.009)));

@@ -3,6 +3,8 @@ package ru.job4j.sbulygin.lambda;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * Class FunctionCalculate.
@@ -25,5 +27,11 @@ public class FunctionCalculate {
             func.andThen(result::add).apply((double) index);
         }
         return result;
+    }
+    public static List<Double> diapasonNoCycle(int start, int end, Function<Double, Double> func) {
+        return IntStream.rangeClosed(start,end)
+                .mapToObj(Double::valueOf)
+                .map(func)
+                .collect(Collectors.toList());
     }
 }
