@@ -14,8 +14,7 @@
     </properties>
 
     <modules>
-       <module>chapter_001</module>
-        <module>chapter_005</module>
+        <module>intern</module>
     </modules>
 
 
