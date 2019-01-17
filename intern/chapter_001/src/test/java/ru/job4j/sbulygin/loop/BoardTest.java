@@ -16,7 +16,6 @@ import static org.junit.Assert.assertThat;
 public class BoardTest {
     private Board board;
     private String line;
-
     @Before
     public void setupTest() {
         board =new Board();
@@ -27,7 +26,6 @@ public class BoardTest {
      */
     @Test
     public void whenPaintBoardWithWidthThreeAndHeightThreeThenStringWithThreeColsAndThreeRows() {
-        Board board = new Board();
         String result = board.paint(3, 3);
         String expected = String.format("X X%s X %sX X%s", line, line, line);
         assertThat(result, is(expected));
@@ -37,7 +35,6 @@ public class BoardTest {
      */
     @Test
     public void whenPaintBoardWithWidthFiveAndHeightFourThenStringWithFiveColsAndFourRows() {
-        Board board = new Board();
         String result = board.paint(5, 4);
         String expected = String.format("X X X%s X X %sX X X%s X X %s", line, line, line, line);
         assertThat(result, is(expected));
