@@ -1,5 +1,6 @@
 package ru.job4j.sbulygin.loop;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -13,6 +14,14 @@ import static org.junit.Assert.assertThat;
  * @since 17.01.19.
  */
 public class BoardTest {
+    private Board board;
+    private String line;
+
+    @Before
+    public void setupTest() {
+        board =new Board();
+        line = System.getProperty("line.separator");
+    }
     /**
      * Test method paint 3X3.
      */
@@ -20,7 +29,6 @@ public class BoardTest {
     public void whenPaintBoardWithWidthThreeAndHeightThreeThenStringWithThreeColsAndThreeRows() {
         Board board = new Board();
         String result = board.paint(3, 3);
-        final String line = System.getProperty("line.separator");
         String expected = String.format("X X%s X %sX X%s", line, line, line);
         assertThat(result, is(expected));
     }
@@ -31,7 +39,6 @@ public class BoardTest {
     public void whenPaintBoardWithWidthFiveAndHeightFourThenStringWithFiveColsAndFourRows() {
         Board board = new Board();
         String result = board.paint(5, 4);
-        final String line = System.getProperty("line.separator");
         String expected = String.format("X X X%s X X %sX X X%s X X %s", line, line, line, line);
         assertThat(result, is(expected));
     }
