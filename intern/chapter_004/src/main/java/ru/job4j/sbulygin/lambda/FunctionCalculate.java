@@ -29,7 +29,7 @@ public class FunctionCalculate {
         return result;
     }
     public static List<Double> diapasonStream(int start, int end, Function<Double, Double> func) {
-        return IntStream.rangeClosed(start,end)
+        return IntStream.rangeClosed(start, end)
                 .mapToObj(Double::valueOf)
                 .map(func)
                 .collect(Collectors.toList());
