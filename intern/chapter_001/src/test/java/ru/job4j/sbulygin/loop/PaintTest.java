@@ -1,0 +1,33 @@
+package ru.job4j.sbulygin.loop;
+
+import org.junit.Test;
+
+import java.util.StringJoiner;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
+
+/**
+ * Class PaintTest.
+ *
+ * @author anonymous.
+ * @version 1.0.
+ * @since 26.01.19.
+ */
+public class PaintTest {
+    @Test
+    public void whenPyramid4Right() {
+       Paint paint = new Paint();
+       String rst = paint.rightTrl(4);
+       System.out.println(rst);
+       assertThat(rst, is(new StringJoiner(System.lineSeparator(), "",
+               System.lineSeparator())
+               .add("^   ")
+               .add("^^  ")
+               .add("^^^ ")
+               .add("^^^^")
+               .toString()
+        )
+        );
+    }
+}
