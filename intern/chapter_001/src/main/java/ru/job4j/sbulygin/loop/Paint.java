@@ -44,7 +44,7 @@ public class Paint {
         int weight = height;
         for (int row = 0; row != height; row++) {
             for (int column = 0; column != weight; column++) {
-                if (row >= weight - column - 1) {
+                if (row >= height - column - 1) {
                     screen.append("^");
                 } else {
                     screen.append(" ");
@@ -76,5 +76,30 @@ public class Paint {
             screen.append(System.lineSeparator());
         }
         return screen.toString();
+    }
+
+    /**
+     * Method paint pyramid:
+     *   ^
+     *  ^^^
+     * ^^^^^
+     * new solution.
+     * @param height height pyramid.
+     * @return pyramid.
+     */
+    public String pyramidTwo(int height) {
+        StringBuilder screen = new StringBuilder();
+        for (int i = 0; i < height; i++) {
+            appendLong(screen, height - i - 1, " ");
+            appendLong(screen, i * 2 + 1, "^");
+            appendLong(screen, height - i - 1, " ");
+            screen.append(System.lineSeparator());
+        }
+        return screen.toString();
+    }
+    private static void appendLong(StringBuilder screen, int length, String chunk) {
+        for (int i = 0; i < length; i++) {
+            screen.append(chunk);
+        }
     }
 }

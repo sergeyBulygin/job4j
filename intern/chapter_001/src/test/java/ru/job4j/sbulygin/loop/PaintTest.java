@@ -64,4 +64,18 @@ public class PaintTest {
                 )
         );
     }
+    @Test
+    public void whenPyramidTwo4Height() {
+        Paint paint = new Paint();
+        String rst = paint.pyramidTwo(4);
+        System.out.println(rst);
+        assertThat(rst, is(new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
+                        .add("   ^   ")
+                        .add("  ^^^  ")
+                        .add(" ^^^^^ ")
+                        .add("^^^^^^^")
+                        .toString()
+                )
+        );
+    }
 }
