@@ -18,7 +18,7 @@ public class BoardTest {
     private String line;
     @Before
     public void setupTest() {
-        board =new Board();
+        board = new Board();
         line = System.getProperty("line.separator");
     }
     /**
