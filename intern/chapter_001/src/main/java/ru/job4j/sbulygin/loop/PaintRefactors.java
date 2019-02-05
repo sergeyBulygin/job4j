@@ -2,6 +2,8 @@ package ru.job4j.sbulygin.loop;
 
 import java.util.function.BiPredicate;
 
+import static java.lang.Math.abs;
+
 /**
  * Class PaintRefactors.
  *
@@ -72,6 +74,6 @@ public class PaintRefactors {
         return this.loopBy(
                 height,
                 2 * height - 1,
-                (row, column) -> row >= height - column - 1 && row + height - 1 >= column);
+                (row, column) -> row >= abs(height - column - 1));
     }
 }
