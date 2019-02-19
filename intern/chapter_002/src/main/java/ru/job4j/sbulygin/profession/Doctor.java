@@ -10,6 +10,15 @@ package ru.job4j.sbulygin.profession;
 public class Doctor extends Profession {
 
     public Doctor() {
-        this.name = "Doctor";
+        setName("Doctor");
+    }
+
+    /**
+     * Method heal - heal patient.
+     * @param patient patient.
+     * @return diagnosis.
+     */
+    public Diagnosis heal(Patient patient) {
+        return new Diagnosis();
     }
 }

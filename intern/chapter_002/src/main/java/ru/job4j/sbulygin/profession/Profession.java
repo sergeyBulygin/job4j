@@ -15,9 +15,17 @@ public class Profession {
 
     /**
      * Getter for name.
-     * @return
+     * @return name.
      */
-    public String getName() {
+    public  String getName() {
         return name;
+    }
+
+    /**
+     * Setter for name.
+     * @param name name.
+     */
+    public void setName(String name) {
+        this.name = name;
     }
 }
