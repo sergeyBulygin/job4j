@@ -3,3 +3,4 @@
 ### С нуля до трудоустройства, Java SE + EE.  
 "The cource did work with git branches"
 "Combining Committed Changes"
+"Creating a new branch through IDEA"
