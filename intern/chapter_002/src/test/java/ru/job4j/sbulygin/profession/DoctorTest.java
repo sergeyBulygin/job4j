@@ -15,8 +15,7 @@ public class DoctorTest {
     @Test
     public void whenDoctorHealPatientThenReturnDiagnosis() {
         Doctor therapist = new Doctor();
-        Patient sick = new Patient();
-        assertThat(therapist.heal(sick), instanceOf(Diagnosis.class));
+        assertThat(therapist.heal(), instanceOf(Diagnosis.class));
     }
 
 }

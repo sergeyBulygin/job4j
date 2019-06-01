@@ -15,7 +15,6 @@ public class EngineerTest {
     @Test
     public void whenEngineerBuildDesignThenReturnHouse() {
         Engineer builder = new Engineer();
-        Design drawing = new Design();
-        assertThat(builder.build(drawing), instanceOf(House.class));
+        assertThat(builder.build(), instanceOf(House.class));
     }
 }

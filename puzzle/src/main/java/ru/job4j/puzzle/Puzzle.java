@@ -18,6 +18,7 @@ import ru.job4j.puzzle.firuges.Cell;
 import ru.job4j.puzzle.firuges.Checker;
 import ru.job4j.puzzle.firuges.Figure;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class Puzzle extends Application {
@@ -25,24 +26,24 @@ public class Puzzle extends Application {
     private final int size = 5;
     private final Logic logic = new Logic(size);
 
-    private Rectangle buildRectangle(int x, int y, int size) {
+    private Rectangle buildRectangle(int x, int y) {
         Rectangle rect = new Rectangle();
-        rect.setX(x * size);
-        rect.setY(y * size);
-        rect.setHeight(size);
-        rect.setWidth(size);
+        rect.setX(x * 40);
+        rect.setY(y * 40);
+        rect.setHeight(40);
+        rect.setWidth(40);
         rect.setFill(Color.WHITE);
         rect.setStroke(Color.BLACK);
         return rect;
     }
 
-    private Rectangle buildFigure(int x, int y, int size, String image) {
+    private Rectangle buildFigure(int x, int y, String image) {
         Rectangle rect = new Rectangle();
         rect.setX(x);
         rect.setY(y);
-        rect.setHeight(size);
-        rect.setWidth(size);
-        Image img = new Image(this.getClass().getClassLoader().getResource(image).toString());
+        rect.setHeight(30);
+        rect.setWidth(30);
+        Image img = new Image(Objects.requireNonNull(this.getClass().getClassLoader().getResource(image)).toString());
         rect.setFill(new ImagePattern(img));
         final Rectangle momento = new Rectangle(x, y);
         rect.setOnDragDetected(
@@ -53,8 +54,8 @@ public class Puzzle extends Application {
         );
         rect.setOnMouseDragged(
                 event -> {
-                    rect.setX(event.getX() - size / 2);
-                    rect.setY(event.getY() - size / 2);
+                    rect.setX(event.getX() - (30 >> 1));
+                    rect.setY(event.getY() - (30 >> 1));
                 }
         );
         rect.setOnMouseReleased(
@@ -87,7 +88,7 @@ public class Puzzle extends Application {
         for (int y = 0; y != this.size; y++) {
             for (int x = 0; x != this.size; x++) {
                 panel.getChildren().add(
-                        this.buildRectangle(x, y, 40)
+                        this.buildRectangle(x, y)
                 );
             }
         }
@@ -146,7 +147,6 @@ public class Puzzle extends Application {
                 this.buildFigure(
                         position.x * 40 + 5,
                         position.y * 40 + 5,
-                        30,
                         figure.icon()
                 )
         );

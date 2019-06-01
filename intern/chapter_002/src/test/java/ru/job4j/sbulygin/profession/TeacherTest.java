@@ -15,7 +15,6 @@ public class TeacherTest {
     @Test
     public void whenDoctorHealPatientThenReturnDiagnosis() {
         Teacher professor = new Teacher();
-        Student disciple = new Student();
-        assertThat(professor.teach(disciple), instanceOf(Lore.class));
+        assertThat(professor.teach(), instanceOf(Lore.class));
     }
 }

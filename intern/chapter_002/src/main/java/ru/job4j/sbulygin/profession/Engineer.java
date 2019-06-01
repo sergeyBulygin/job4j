@@ -14,10 +14,9 @@ public class Engineer extends Profession {
 
     /**
      * Method build - build by drawing.
-     * @param design design.
      * @return house.
      */
-    public House build(Design design) {
+    public House build() {
         return new House();
     }
 }

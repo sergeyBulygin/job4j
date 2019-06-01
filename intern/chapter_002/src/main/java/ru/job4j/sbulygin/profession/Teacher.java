@@ -15,10 +15,9 @@ public class Teacher extends Profession {
 
     /**
      * Method teach - teach student.
-     * @param student student.
      * @return lore.
      */
-    public Lore teach(Student student) {
+    public Lore teach() {
         return new Lore();
     }
 }
