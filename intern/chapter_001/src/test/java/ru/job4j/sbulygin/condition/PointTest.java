@@ -24,4 +24,16 @@ public class PointTest {
         double result = x.distance(y);
         assertThat(result, is(2d));
     }
+    /**
+     * Test Point.
+     *
+     * Test method distance.
+     */
+    @Test
+    public void whenCalculationDistanceFromOnePointToSecondIn3dThenResultTwo() {
+        final Point x = new Point(10, 7, 1);
+        final Point y = new Point(12, 7, 1);
+        double result = x.distanceThreePoint(y);
+        assertThat(result, is(2d));
+    }
 }

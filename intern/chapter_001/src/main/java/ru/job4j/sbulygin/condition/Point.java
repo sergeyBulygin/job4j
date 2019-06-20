@@ -17,6 +17,10 @@ public class Point {
      * Сoordinate y field.
      */
     private int y;
+    /**
+     *  Сoordinate z field.
+     */
+    private int z;
 
     /**
      * Class Point constructor.
@@ -29,11 +33,31 @@ public class Point {
     }
 
     /**
+     * Class Point constructor for 3d.
+     * @param x coordinate x.
+     * @param y coordinate y.
+     * @param z coordinate z.
+     */
+    public Point(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+
+    /**
      * The method calculates the distance between two points
      * @param that second point.
      * @return result.
      */
     public double distance(Point that) {
         return Math.sqrt(Math.pow(this.x - that.x, 2) + Math.pow(this.y - that.y, 2));
+    }
+    /**
+     * The method calculates the distance between three points
+     * @param that second point.
+     * @return result.
+     */
+    public double distanceThreePoint(Point that) {
+        return Math.sqrt(Math.pow(this.x - that.x, 2) + Math.pow(this.y - that.y, 2) + Math.pow(this.z - that.z, 2));
     }
 }
