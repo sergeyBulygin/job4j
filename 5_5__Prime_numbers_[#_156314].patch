@@ -1,0 +1,83 @@
+Index: intern/chapter_001/src/test/java/ru/job4j/sbulygin/loop/PrimeNumberTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- intern/chapter_001/src/test/java/ru/job4j/sbulygin/loop/PrimeNumberTest.java	(date 1562774766809)
++++ intern/chapter_001/src/test/java/ru/job4j/sbulygin/loop/PrimeNumberTest.java	(date 1562774766809)
+@@ -0,0 +1,35 @@
++/**
++ * Today is 10.07.2019
++ * sergt is  not the best
++ */
++package ru.job4j.sbulygin.loop;
++
++import org.junit.Test;
++import static org.hamcrest.core.Is.is;
++import static org.junit.Assert.assertThat;
++
++/**
++ * Test class for PrimeNumber.
++ */
++public class PrimeNumberTest {
++    @Test
++    public void when5() {
++        PrimeNumber prime = new PrimeNumber();
++        int count = prime.calc(5);
++        assertThat(count, is(3));
++    }
++
++    @Test
++    public void when11() {
++        PrimeNumber prime = new PrimeNumber();
++        int count = prime.calc(11);
++        assertThat(count, is(5));
++    }
++
++    @Test
++    public void when1() {
++        PrimeNumber prime = new PrimeNumber();
++        int count = prime.calc(2);
++        assertThat(count, is(1));
++    }
++}
+Index: intern/chapter_001/src/main/java/ru/job4j/sbulygin/loop/PrimeNumber.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- intern/chapter_001/src/main/java/ru/job4j/sbulygin/loop/PrimeNumber.java	(date 1562774811078)
++++ intern/chapter_001/src/main/java/ru/job4j/sbulygin/loop/PrimeNumber.java	(date 1562774811078)
+@@ -0,0 +1,32 @@
++/**
++ * Today is 10.07.2019
++ * sergt is  not the best
++ */
++package ru.job4j.sbulygin.loop;
++
++/**
++ * PrimeNumber class.
++ */
++public class PrimeNumber {
++    /**
++     * Method counts the number of prime numbers
++     * @param finish extreme value.
++     * @return number of prime numbers.
++     */
++    public int calc(int finish) {
++        int count = 0;
++        for (int number = 2; number <= finish; number++) {
++            boolean prime = true;
++            for (int divider = 2; divider < number; divider++) {
++                if (number % divider == 0) {
++                    prime = false;
++                    break;
++                }
++            }
++            if (prime) {
++                count++;
++            }
++        }
++        return count;
++    }
++}
